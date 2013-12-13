@@ -1,0 +1,29 @@
+<assembly xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2 http://maven.apache.org/xsd/assembly-1.1.2.xsd">
+  <id>tact-helloworld-plugin</id>
+  <includeBaseDirectory>false</includeBaseDirectory>
+  <formats>
+    <format>dir</format>
+    <format>zip</format>
+  </formats>
+  <fileSets>
+    <fileSet>
+      <directory>../client/target/tcat-helloworld-client-${version}</directory>
+      <outputDirectory>web</outputDirectory>
+    </fileSet>
+    <fileSet>
+      <directory>src/main/resources</directory>
+      <outputDirectory>config</outputDirectory>
+    </fileSet>
+  </fileSets>
+  <dependencySets>
+    <dependencySet>
+      <outputDirectory>lib</outputDirectory>
+      <useTransitiveFiltering>false</useTransitiveFiltering>
+      <includes>
+        <include>com.mulesoft:hello-world-server</include>
+        <include>com.mulesoft:hello-world-client</include>
+      </includes>
+    </dependencySet>
+  </dependencySets>
+</assembly>
