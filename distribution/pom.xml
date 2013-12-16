@@ -12,6 +12,10 @@
       <groupId>com.mulesoft</groupId>
       <artifactId>tcat-helloworld-server</artifactId>
     </dependency>
+    <dependency>
+      <groupId>com.mulesoft</groupId>
+      <artifactId>tcat-helloworld-client</artifactId>
+    </dependency>
   </dependencies>
   <build>
     <plugins>

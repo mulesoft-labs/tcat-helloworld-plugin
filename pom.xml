@@ -22,7 +22,7 @@
       <!-- Project specific dependencies -->
       <dependency>
         <groupId>com.mulesoft</groupId>
-        <artifactId>hello-world-client</artifactId>
+        <artifactId>tcat-helloworld-client</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>

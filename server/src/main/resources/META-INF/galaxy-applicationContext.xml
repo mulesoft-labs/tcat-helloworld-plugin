@@ -1,12 +1,13 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
        xmlns:tx="http://www.springframework.org/schema/tx"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="
     http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
     http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
-    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd">
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
 
+  <context:property-placeholder location="classpath:META-INF/plugin-config.properties" ignore-unresolvable="false"/>
   <bean class="org.mule.galaxy.web.GwtModule">
     <property name="name" value="com.mulesoft.helloworld.HelloWorld"/>
     <property name="rpcServices">
@@ -19,7 +20,7 @@
   <bean id="helloWorld" class="com.mulesoft.helloworld.server.HelloWorldServiceImpl" 
         init-method="initialize">
      <property name="webManager" ref="webManager"/>
-     <property name="configFolder" value="${plugin.configFolder:config}"></property>
+     <property name="configFolder" value="${plugin.configFolder}"></property>
   </bean>
         
   

@@ -21,8 +21,8 @@
       <outputDirectory>lib</outputDirectory>
       <useTransitiveFiltering>false</useTransitiveFiltering>
       <includes>
-        <include>com.mulesoft:hello-world-server</include>
-        <include>com.mulesoft:hello-world-client</include>
+        <include>com.mulesoft:tcat-helloworld-client</include>
+        <include>com.mulesoft:tcat-helloworld-server</include>
       </includes>
     </dependencySet>
   </dependencySets>

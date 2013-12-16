@@ -24,21 +24,20 @@ public class HelloWorldServiceImpl implements HelloWorldService {
     private Logger log = LoggerFactory.getLogger(getClass());
     private String configFolder;
     public void initialize() throws IOException {
+        Properties props = new Properties();
         //Loading properties order is: System property -> config folder
         File propertiesFile;
-        if(System.getProperty("PLUGIN_PROPERTIES") != null){
-            propertiesFile = new File(System.getProperty("PLUGIN_PROPERTIES"));
+        if(System.getProperty(PLUGIN_PROPERTIES) != null){
+            propertiesFile = new File(System.getProperty(PLUGIN_PROPERTIES));
         } else{
             propertiesFile = new File(configFolder,PLUGIN_PROPERTIES_FILENAME);
-            System.out.println("Trying to load the plugin from path "+ propertiesFile.getAbsolutePath());
+            log.debug("Trying to load the plugin from path "+ propertiesFile.getAbsolutePath());
         }
         if(!propertiesFile.exists()){
             log.warn("Plugin properties not found, the plugin won't be loaded");
             return;
         }
         InputStream inputStream = new FileInputStream(propertiesFile);
-
-        Properties props = new Properties();
         props.load(inputStream);
 
         for (int i = 0; true; i++) {

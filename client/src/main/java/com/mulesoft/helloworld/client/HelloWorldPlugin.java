@@ -18,7 +18,7 @@ public class HelloWorldPlugin implements EntryPoint {
 
         ServiceDefTarget target = (ServiceDefTarget) portalSvc;
         String baseUrl = GWT.getModuleBaseURL();
-        target.setServiceEntryPoint(baseUrl + "../handler/portal.rpc");
+        target.setServiceEntryPoint(baseUrl + "../handler/helloworld.rpc");
         
         // Load in all the listeners for portals
         portalSvc.getHelloWorld(new AsyncCallback<List<HelloWorldInfo>>() {

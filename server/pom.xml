@@ -17,7 +17,7 @@
     </dependency>
     <dependency>
       <groupId>com.mulesoft</groupId>
-      <artifactId>hello-world-client</artifactId>
+      <artifactId>tcat-helloworld-client</artifactId>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
@@ -56,4 +56,12 @@
         <classifier>sources</classifier>
       </dependency>
   </dependencies>
+  <build>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>true</filtering>
+      </resource>
+    </resources>
+  </build>
 </project>
