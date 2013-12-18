@@ -8,7 +8,7 @@
   </formats>
   <fileSets>
     <fileSet>
-      <directory>../client/target/tcat-helloworld-client-${version}</directory>
+      <directory>../client/target/tcat-helloworld-plugin-client-${version}</directory>
       <outputDirectory>web</outputDirectory>
     </fileSet>
     <fileSet>
@@ -21,8 +21,8 @@
       <outputDirectory>lib</outputDirectory>
       <useTransitiveFiltering>false</useTransitiveFiltering>
       <includes>
-        <include>com.mulesoft:tcat-helloworld-client</include>
-        <include>com.mulesoft:tcat-helloworld-server</include>
+        <include>com.mulesoft:tcat-helloworld-plugin-client</include>
+        <include>com.mulesoft:tcat-helloworld-plugin-server</include>
       </includes>
     </dependencySet>
   </dependencySets>

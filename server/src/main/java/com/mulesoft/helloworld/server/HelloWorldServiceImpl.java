@@ -31,10 +31,10 @@ public class HelloWorldServiceImpl implements HelloWorldService {
             propertiesFile = new File(System.getProperty(PLUGIN_PROPERTIES));
         } else{
             propertiesFile = new File(configFolder,PLUGIN_PROPERTIES_FILENAME);
-            log.debug("Trying to load the plugin from path "+ propertiesFile.getAbsolutePath());
         }
+        log.warn("Trying to load the plugin from path "+ propertiesFile.getAbsolutePath());
         if(!propertiesFile.exists()){
-            log.warn("Plugin properties not found, the plugin won't be loaded");
+            log.warn("Plugin properties file not found, the plugin won't be loaded");
             return;
         }
         InputStream inputStream = new FileInputStream(propertiesFile);

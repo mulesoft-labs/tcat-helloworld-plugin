@@ -2,10 +2,10 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.mulesoft</groupId>
-    <artifactId>tcat-helloworld-plugin</artifactId>
+    <artifactId>tcat-helloworld-plugin-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>tcat-helloworld-server</artifactId>
+  <artifactId>tcat-helloworld-plugin-server</artifactId>
   <dependencies>
     <dependency>
       <groupId>org.mule.galaxy.ee</groupId>
@@ -17,7 +17,7 @@
     </dependency>
     <dependency>
       <groupId>com.mulesoft</groupId>
-      <artifactId>tcat-helloworld-client</artifactId>
+      <artifactId>tcat-helloworld-plugin-client</artifactId>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
